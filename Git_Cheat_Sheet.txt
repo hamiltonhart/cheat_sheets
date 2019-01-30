@@ -1,0 +1,87 @@
+GIT CHEAT SHEET
+
+1) Create a directory to house the project
+2) From within the project directory; COMMAND: "git init" ; to create a git repository in the project directory.
+	- each time you save (commit) a new version is saved in the git repository
+3) Before commiting, you must add what you want to track with git into the newly created repository
+	- COMMAND: "git add <filename>"
+	or - COMMAND: "git add ."; adds the entire directory
+4) Commit
+	- COMMAND: "git commit -m "Enter a note for yourself here" "
+5) Ignoring files. Create a file called .gitignore and put the filepath for the file you want to ignore
+	- COMMAND; "echo "<path to file to ignore" >> nano .gitignore"
+6) Going back to previous commits
+	- COMMAND; "git checkout --<filename>"; this discards any uncommited changes
+	- COMMAND; "git checkout <commit number>"; this reverts back to that commit. Will discard any changes not commited to the current project
+
+
+	COMMANDS
+
+	INITIAL SETUP
+	-- Username and email are attached to interactions in Git. --
+
+	1) git config --global user.name <"Your Name">
+	2) git config --global user.email <"youremail@email.com">
+
+	
+	
+	REPO CREATION
+	1) git init
+		- creates empty repository
+
+	2) git clone <url> <where to clone>
+		- ie. git clone github.com/hamiltonhart/repotoclone .
+			- this will copy into the current directory
+
+	
+	
+	COMMITING
+
+	-- Commits should be kept as tight as possible. Selecting specific files and
+	doing multiple commits may be best to ensure clear communication.
+
+	1) git status
+		- shows the files that have changes and which are currently in the 
+		staging area.
+	2) git add <filename>
+		- adds a file to the staging area for commit. Files can be added
+		individually or all at once (. or -A)
+
+	3) git commit -m "Your message here"
+		- messages are important and should be detailed.
+
+
+	PULL/PUSH
+
+	1) git pull origin master
+		- ensures the master branch is up to date with any changes that were 
+		committed to the remote repo master branch since it was last pulled
+
+	2) git push origin master
+		-pushes the local master branch to the remote repo
+
+
+	BRANCHES
+
+	1) git branch -a
+		- lists all branches locally and on the remote repo
+
+	2) git diff
+		- lists the changes made to the file(s)
+
+	3) git branch
+		- lists local branches
+
+	4) git branch -a
+		- lists local and remote branches
+
+	5) git branch -d <branch name>
+		- deletes named branch locally
+
+	6) git push origin --delete <branch name>
+		- deletes named remote branch
+
+	7 ) git fetch -p
+		- stops local repo from tracking branches that no longer exist
+
+	
